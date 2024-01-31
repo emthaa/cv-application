@@ -1,0 +1,36 @@
+.cv-preview{
+    min-width: 500px;
+    background: #ffffff;
+    box-shadow:  20px 20px 60px #bfbfbf,
+            -20px -20px 60px #ffffff;
+    padding: 15px;
+}
+
+.full-name{
+    text-align: center;
+    margin: 0;
+}
+
+.email-and-phone{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.education-preview-header,.experience-preview-header{
+    border-bottom: 2px solid black;
+    margin: 0;
+}
+
+.education-content,.experience-content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.city-country-preview{
+    text-align: right;
+}
+
+.description-job-preview{
+    font-size: 12px;
+}
