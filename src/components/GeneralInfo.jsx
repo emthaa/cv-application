@@ -3,7 +3,7 @@
 const generalInfo = (props) => {
     return(
         <div className="GeneralInfoInput">
-            <h2>General Info</h2>
+            <h1>General Info</h1>
             <label>Name</label>
             <input />
             <label>Email</label>

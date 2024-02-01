@@ -1,0 +1,13 @@
+.GeneralInfoInput,.ExperienceInput,.EducationInput{
+    display: flex;
+    flex-direction: column;
+}
+
+.GeneralInfoInput > h1,.ExperienceInput > h1,.EducationInput > h1{
+    text-align: center;
+}
+
+.cv-builder > div{
+    max-width: 250px;
+    width: 100%;
+}

@@ -1,15 +1,19 @@
-const Experience = (props) => {
+const Education = (props) => {
     return(
-        <div className="ExperienceInput">
-            <label>Name</label>
+        <div className="EducationInput">
+            <h1>Education Experience</h1>
+            <label>Degree</label>
             <input />
-            <label>Email</label>
+            <label>School</label>
             <input />
-            <label>Phone</label>
-            <input />
+
+                <label>Start Date</label>
+                <input />
+                <label>End Date</label>
+                <input />
         </div>
 
     )
 }
 
-export default Experience
+export default Education

@@ -15,7 +15,6 @@ const CvPreview = (props) => {
                     <p>Degree, School</p>
                     <div className="right-education-content">
                         <p>Jan,2024 - Feb,2024</p>
-                        <p className="city-country-preview">City, Country</p>
                     </div>
                 </div>
             </div>
