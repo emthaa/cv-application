@@ -1,13 +1,16 @@
 import { useState } from "react";
 
-function SaveButton(setPerson){
+//make two separete people, one for the input, one for output
+
+function SaveButton(props){
 
     const handleButtonClick = () => {
-        
+        props.setPersonOutput(props.personInput)
+        props.setEditMode(false)
     };
 
     return(
-        <button class="save-button" role="button" onChange={handleButtonClick}>Save</button>
+        <button className="save-button" role="button" onClick={handleButtonClick}>Save</button>
     )
 
 }

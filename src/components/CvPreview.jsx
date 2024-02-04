@@ -1,28 +1,26 @@
 const CvPreview = (props) => {
 
-    console.log(props)
-
     return(
         <div className="cv-preview">
             <div className="cv-preview-general-info">
-                <h1 className="full-name">{props.person.general.name}</h1>
+                <h1 className="full-name">{props.personOutput.general.name}</h1>
                 <div className="email-and-phone">
-                    <p className="email">{props.person.general.email}</p>
-                    <p className="phone-number">{props.person.general.phoneNumber}</p>
+                    <p className="email">{props.personOutput.general.email}</p>
+                    <p className="phone-number">{props.personOutput.general.phoneNumber}</p>
                 </div>
             </div>
             <div>
                 <h2 className="education-preview-header">Education</h2>
                 <div className="education-content">
-                    <p>{props.person.education.degree}, {props.person.education.school}</p>
-                    <p>{props.person.education.startDate} - {props.person.education.endDate}</p>
+                    <p>{props.personOutput.education.degree}, {props.personOutput.education.school}</p>
+                    <p>{props.personOutput.education.startDate} - {props.personOutput.education.endDate}</p>
                 </div>
             </div>
             <div>
                 <h2 className="experience-preview-header">Professional Experience</h2>
                 <div className="experience-content">
-                    <p>{props.person.job.jobTitle}, {props.person.job.company}</p>   
-                    <p>{props.person.job.startDate} - {props.person.job.endDate}</p>
+                    <p>{props.personOutput.job.jobTitle}, {props.personOutput.job.company}</p>   
+                    <p>{props.personOutput.job.startDate} - {props.personOutput.job.endDate}</p>
                 </div>
             </div>
         </div>

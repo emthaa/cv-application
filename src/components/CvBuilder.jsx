@@ -1,45 +1,58 @@
 import { useState } from "react";
+import SaveButton from "./SaveButton";
 
-function CvBuilder(){
+function CvBuilder(props){
 
+    console.log(props.personInput)
+
+    const handleInputChange = (event, section, field) => {
+        const value = event.target.value;
+        props.setPersonInput(prevState => ({
+            ...prevState,
+            [section]: {
+                ...prevState[section],
+                [field]: value
+            }
+        }));
+    };
 
     return(
-        <>
+        <div className="cv-builder">
             <div className="GeneralInfoInput">
                 <h1>General Info</h1>
                 <label>Name</label>
-                <input id="name" />
+                <input id="name" value={props.personInput.general.name} onChange={(e) => handleInputChange(e, 'general', 'name')} />
                 <label>Email</label>
-                <input id="email" />
+                <input id="email" value={props.personInput.general.email} onChange={(e) => handleInputChange(e, 'general', 'email')} />
                 <label>Phone</label>
-                <input id="phone" />
+                <input id="phone" value={props.personInput.general.phoneNumber} onChange={(e) => handleInputChange(e, 'general', 'phoneNumber')} />
             </div>
 
             <div className="EducationInput">
                 <h1>Education Experience</h1>
                 <label>Degree</label>
-                <input />
+                <input value={props.personInput.education.degree} onChange={(e) => handleInputChange(e, 'education', 'degree')} />
                 <label>School</label>
-                <input />
-                    <label>Start Date</label>
-                    <input type="date"/>
-                    <label>End Date</label>
-                    <input type="date"/>
+                <input value={props.personInput.education.school} onChange={(e) => handleInputChange(e, 'education', 'school')} />
+                <label>Start Date</label>
+                <input type="date" value={props.personInput.education.startDate} onChange={(e) => handleInputChange(e, 'education', 'startDate')} />
+                <label>End Date</label>
+                <input type="date" value={props.personInput.education.endDate} onChange={(e) => handleInputChange(e, 'education', 'endDate')} />
             </div>
 
             <div className="ExperienceInput">
                 <h1>Professional Experience</h1>
                 <label>Job Title</label>
-                <input />
+                <input value={props.personInput.job.jobTitle} onChange={(e) => handleInputChange(e, 'job', 'jobTitle')} />
                 <label>Company</label>
-                <input />
-                    <label>Start Date</label>
-                    <input type="date"/>
-                    <label>End Date</label>
-                    <input type="date"/>
+                <input value={props.personInput.job.company} onChange={(e) => handleInputChange(e, 'job', 'company')} />
+                <label>Start Date</label>
+                <input type="date" value={props.personInput.job.startDate} onChange={(e) => handleInputChange(e, 'job', 'startDate')} />
+                <label>End Date</label>
+                <input type="date" value={props.personInput.job.endDate} onChange={(e) => handleInputChange(e, 'job', 'endDate')} />
             </div>
-
-        </>
+            <SaveButton personInput={props.personInput} personOutput={props.personOutput} setPersonOutput={props.setPersonOutput} setEditMode={props.setEditMode}/> 
+        </div>
     )
 }
 
