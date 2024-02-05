@@ -31,7 +31,7 @@
 
 
 
-.save-button{
+.save-button,.edit-button{ 
     background-color: white;
     color: black;
     border:  2px solid black;
@@ -42,10 +42,18 @@
     cursor: pointer;
 }
 
-.save-button:hover{
+.save-button:hover,.edit-button:hover{
     background-color: rgb(219, 219, 219);
 }
 
-.save-button:active{
+.save-button:active,.edit-button:active{
     background-color: rgb(180, 180, 180);
+}
+
+.cv-builder > div > p{
+    border-radius: 5px;
+  height: 20px;
+  border: 1px solid black;
+  margin: 0;
+  font-size: 14px;
 }

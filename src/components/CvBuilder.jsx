@@ -3,8 +3,6 @@ import SaveButton from "./SaveButton";
 
 function CvBuilder(props){
 
-    console.log(props.personInput)
-
     const handleInputChange = (event, section, field) => {
         const value = event.target.value;
         props.setPersonInput(prevState => ({

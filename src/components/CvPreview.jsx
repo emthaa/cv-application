@@ -1,5 +1,7 @@
 const CvPreview = (props) => {
 
+ 
+
     return(
         <div className="cv-preview">
             <div className="cv-preview-general-info">

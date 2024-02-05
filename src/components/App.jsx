@@ -1,7 +1,7 @@
 import CvBuilder from './CvBuilder'
 import CvPreview from './CvPreview'
-import SaveButton from './SaveButton'
 import { useState } from 'react'
+import CvBuilderLocked from './CvBuilderLocked'
 
 function App(){
 
@@ -54,10 +54,10 @@ function App(){
             <CvPreview personOutput={personOutput}/>
             </>
         )
-    }else{
+    }else if(editMode == false){
         return(
             <>
-            
+            <CvBuilderLocked personOutput={personOutput} setEditMode={setEditMode} editMode={editMode}/>
             <CvPreview personOutput={personOutput}/>
             </>
         )

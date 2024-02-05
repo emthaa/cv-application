@@ -1,7 +1,5 @@
 import { useState } from "react";
 
-//make two separete people, one for the input, one for output
-
 function SaveButton(props){
 
     const handleButtonClick = () => {
