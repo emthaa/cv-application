@@ -49,7 +49,7 @@ function CvBuilder(props){
                 <label>End Date</label>
                 <input type="date" value={props.personInput.job.endDate} onChange={(e) => handleInputChange(e, 'job', 'endDate')} />
             </div>
-            <SaveButton personInput={props.personInput} personOutput={props.personOutput} setPersonOutput={props.setPersonOutput} setEditMode={props.setEditMode}/> 
+            <SaveButton setPersonInput = {props.setPersonInput} personInput={props.personInput} personOutput={props.personOutput} setPersonOutput={props.setPersonOutput} setEditMode={props.setEditMode}/> 
         </div>
     )
 }

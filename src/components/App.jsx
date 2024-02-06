@@ -57,7 +57,7 @@ function App(){
     }else if(editMode == false){
         return(
             <>
-            <CvBuilderLocked personOutput={personOutput} setEditMode={setEditMode} editMode={editMode}/>
+            <CvBuilderLocked personInput={personInput} setEditMode={setEditMode} editMode={editMode}/>
             <CvPreview personOutput={personOutput}/>
             </>
         )
