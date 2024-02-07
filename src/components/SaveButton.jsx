@@ -2,18 +2,20 @@ import { useState } from "react";
 
 function SaveButton(props){
 
-    const changeDateFormat = (j) => {
-        const newDate = new Date(j)
-        const month = newDate.toLocaleString('default', { month: 'long' });
-
-        const formattedDate = month + ' ' + newDate.getFullYear()
-
-        if(formattedDate == "Invalid Date NaN"){
-            return ''
+    const changeDateFormat = (dateString) => {
+        if (!dateString) return ''; // Handle empty date string or other falsy values
+    
+        const [year, month, day] = dateString.split('-').map(Number);
+        const newDate = new Date(year, month - 1, day);
+    
+        if (isNaN(newDate.getTime())) {
+            return ''; // Invalid Date
         }
-
-        return(formattedDate)
-
+    
+        const monthName = newDate.toLocaleString('default', { month: 'long' });
+        const formattedDate = monthName + ' ' + newDate.getFullYear();
+    
+        return formattedDate;
     }
 
     const handleButtonClick = () => {
