@@ -1,6 +1,12 @@
 const CvPreview = (props) => {
 
- 
+    if(props.userInputOnce == false){
+        return(
+        <div className="cv-preview">
+
+        </div>
+        )
+    } else{
 
     return(
         <div className="cv-preview">
@@ -28,6 +34,7 @@ const CvPreview = (props) => {
         </div>
     )
 
+    }
 }
 
 export default CvPreview

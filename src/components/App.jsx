@@ -47,20 +47,22 @@ function App(){
 
     const [editMode, setEditMode] = useState(true)
 
-    const [saveButtonMode,setSaveButtonMode] = useState(false)
+    const [fieldsEmpty,setFieldsEmpty] = useState(false)
+
+    const [userInputOnce, setUserInputOnce] = useState(false)
 
     if(editMode == true){
         return(
             <>
-            <CvBuilder saveButtonMode={saveButtonMode} setSaveButtonMode={setSaveButtonMode}personInput={personInput} setPersonInput={setPersonInput} personOutput={personOutput} setPersonOutput={setPersonOutput} setEditMode={setEditMode}/>
-            <CvPreview personOutput={personOutput}/>
+            <CvBuilder setUserInputOnce={setUserInputOnce} fieldsEmpty={fieldsEmpty} setFieldsEmpty={setFieldsEmpty}personInput={personInput} setPersonInput={setPersonInput} personOutput={personOutput} setPersonOutput={setPersonOutput} setEditMode={setEditMode}/>
+            <CvPreview userInputOnce={userInputOnce} personOutput={personOutput}/>
             </>
         )
     }else if(editMode == false){
         return(
             <>
             <CvBuilderLocked personInput={personInput} setEditMode={setEditMode} editMode={editMode}/>
-            <CvPreview personOutput={personOutput}/>
+            <CvPreview userInputOnce={userInputOnce} personOutput={personOutput}/>
             </>
         )
     }

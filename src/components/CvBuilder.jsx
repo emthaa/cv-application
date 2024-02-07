@@ -32,7 +32,7 @@ function CvBuilder(props){
         
     };
 
-    props.setSaveButtonMode(checkForEmptyFields(props.personInput))
+    props.setFieldsEmpty(checkForEmptyFields(props.personInput))
 
     return(
         <div className="cv-builder">
@@ -69,7 +69,7 @@ function CvBuilder(props){
                 <label>End Date</label>
                 <input type="date" value={props.personInput.job.endDate} onChange={(e) => handleInputChange(e, 'job', 'endDate')} />
             </div>
-            <SaveButton saveButtonMode={props.saveButtonMode}setPersonInput = {props.setPersonInput} personInput={props.personInput} personOutput={props.personOutput} setPersonOutput={props.setPersonOutput} setEditMode={props.setEditMode}/> 
+            <SaveButton setUserInputOnce={props.setUserInputOnce} fieldsEmpty={props.fieldsEmpty}setPersonInput = {props.setPersonInput} personInput={props.personInput} personOutput={props.personOutput} setPersonOutput={props.setPersonOutput} setEditMode={props.setEditMode}/> 
         </div>
     )
     
