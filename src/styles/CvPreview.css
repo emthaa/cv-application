@@ -1,10 +1,8 @@
 .cv-preview{
     min-width: 500px;
     background: #ffffff;
-    box-shadow:  20px 20px 60px #bfbfbf,
-            -20px -20px 60px #ffffff;
     padding: 15px;
-
+    background-color: #F2F2F2;
 }
 
 .full-name{
@@ -36,3 +34,5 @@
 .description-job-preview{
     font-size: 12px;
 }
+
+

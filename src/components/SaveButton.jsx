@@ -16,6 +16,21 @@ function SaveButton(props){
 
     }
 
+    function checkForEmptyFields(data) {
+        for (let key in data) {
+            if (typeof data[key] === 'object') {
+                if (checkForEmptyFields(data[key])) {
+                    return true;
+                }
+            } else {
+                if (data[key] === '') {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
     const handleButtonClick = () => {
 
         console.log(changeDateFormat())
@@ -44,9 +59,16 @@ function SaveButton(props){
 
     };
 
-    return(
-        <button className="save-button" role="button" onClick={handleButtonClick}>Save</button>
-    )
+    if(props.saveButtonMode == false){
+
+        return(
+            <button className="save-button" role="button" onClick={handleButtonClick}>Save</button>
+        )
+    }else{
+        return(
+            <button className="save-button-disabled">Save</button>
+        )
+    }
 
 }
 

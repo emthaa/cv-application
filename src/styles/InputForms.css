@@ -27,13 +27,21 @@
     
 }
 
-
-
-
+.cv-builder{
+    min-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 31px;
+    background: #F2F2F2;
+    padding-bottom: 25px;
+}
 
 .save-button,.edit-button{ 
-    background-color: white;
-    color: black;
+    background-color: #3185FC;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
     border:  2px solid black;
     margin-top: 15px;
     width: 100px;
@@ -43,11 +51,11 @@
 }
 
 .save-button:hover,.edit-button:hover{
-    background-color: rgb(219, 219, 219);
+    background-color: #4391ff;
 }
 
 .save-button:active,.edit-button:active{
-    background-color: rgb(180, 180, 180);
+    background-color: #62a4ff;
 }
 
 .cv-builder > div > p{
@@ -56,4 +64,17 @@
   border: 1px solid black;
   margin: 0;
   font-size: 14px;
+}
+
+.save-button-disabled{
+    background-color: #62a4ff;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    border:  2px solid black;
+    margin-top: 15px;
+    width: 100px;
+    border-radius: 10px;
+    height: 25px;
+    cursor: not-allowed;
+    opacity: .5;
 }
